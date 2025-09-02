@@ -1,11 +1,14 @@
-import './App.css';
+import Body from "./components/Body";
+import {Provider} from 'react-redux'
+import appStore from "./utils/appStore";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className='font-bold text-3xl'>hello world</div>
-      </header>
+    <div className="">
+      <Provider store = {appStore} >
+        <Body />
+      </Provider>
+
     </div>
   );
 }
